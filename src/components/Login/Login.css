@@ -1,0 +1,115 @@
+.login {
+    background-color: hsl(219, 48%, 8%);
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.loginContainer {
+    height: 80%;
+    width:70%;
+    position: absolute;
+    background-color: white;
+    transform:translateX(20%), translateY(-50%);
+    top:50%;
+    box-shadow: 0 0 10px rgb(0,0,0,0.473);
+    display: flex;
+    justify-content: center;
+    animation: loginAnimation 1s linear forwards;
+
+}
+
+.loginForm {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    width: 50%
+
+}
+
+.loginForm > h3{ 
+    text-align: center;
+    margin: 1vmax;
+}
+
+.loginForm > input {
+    padding: 1vmax ;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid rgb(0,0,0,0.205);
+    font-size:  1rem;
+    font-family: "Roboto";
+    transform: translateX(-100vw);
+    animation: loginFormInputs 1s ease-in-out forwards 0.5s;
+
+}
+
+.loginForm > button {
+    background-color: hsl(250,100%,75%);
+    animation: loginFormBtn 1s ease-in-out;
+}
+.loginForm> button:hover {
+    background-color:hsl(219, 48%, 8%);
+}
+
+@keyframes loginFormBtn {
+    
+    to {
+        transform: translateY(0);
+    }
+    
+}
+@keyframes loginFormAnimation {
+    from {
+        transform: translateX(-100%)
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes loginAnimation {
+    from {
+        transform: translateX(-100%) translateY(-50%);
+    }
+    to {
+        transform: translateX(10%) translateY(-50%);
+    }
+}
+
+@keyframes loginFormInputs {
+    to {
+        transform: translateX(0);
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .login{
+        background-color: hsl(219, 48%, 8%);
+        height: 100vh;
+        justify-content: left;
+        align-self: left;
+
+    }
+    .loginContainer {
+        background-color: white;
+        width: 90%;
+        border-radius: 0;
+    
+    }
+    .loginForm {
+        border-radius: 0;
+        flex-direction:column;
+
+    }
+    .loginForm >input {
+        padding: 3vw 6vw;
+        margin: 2vw;
+    }
+}
+
+
+
